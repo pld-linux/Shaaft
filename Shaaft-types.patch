@@ -1,0 +1,25 @@
+--- Shaaft-0.5.0/utilsgl/gl++.hpp.orig	2004-01-01 04:32:28.000000000 +0000
++++ Shaaft-0.5.0/utilsgl/gl++.hpp	2004-03-01 15:06:24.000000000 +0000
+@@ -22,18 +22,11 @@
+ #endif
+ 
+ #include <GL/gl.h>
++#include <stddef.h>
+ 
+-#ifndef GLintptrARB
+-# if defined(_WIN64)
+-	typedef __int64 GLintptrARB;
+-	typedef __int64 GLsizeiptrARB;
+-# elif defined(__ia64__) || defined(__x86_64__)
+-	typedef long int GLintptrARB;
+-	typedef long int GLsizeiptrARB;
+-# else
+-	typedef int GLintptrARB;
+-	typedef int GLsizeiptrARB;
+-# endif
++#if !defined(GLintptrARB) && !defined(GL_ARB_vertex_buffer_object)
++typedef ptrdiff_t GLintptrARB;
++typedef ptrdiff_t GLsizeiptrARB;
+ #endif
+ 
+ #ifndef GLhalf
