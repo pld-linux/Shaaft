@@ -19,7 +19,7 @@ BuildRequires:	libpng-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _noautoreqdep   libGL.so.1 libGLU.so.1
+%define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
 Shaaft is a falling block game resembling Blockout. It is a 3D Tetris
