@@ -8,14 +8,16 @@ Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/criticalmass/%{name}-%{version}.tar.bz2
 # Source0-md5:	c86524f286c60e3fd45b10d023a92db2
 URL:		http://criticalmass.sourceforge.net/shaaft.php
+BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_image-devel
-BuildRequires:	OpenGL-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libpng-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-# (ytm) to dlatego ze jest w CriticalMass.spec i pewnie z jakiegos powodu sie tam znalazlo
+
 %define         _noautoreqdep   libGL.so.1 libGLU.so.1
 
 %description
@@ -30,16 +32,17 @@ trójwymiarowy klon Tetrisa.
 %setup -q
 
 %build
-rm -f missing
 ./autogen.sh
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-# this one gots installed by author's mistake
+
+# this one gets installed by author's mistake
 rm -f $RPM_BUILD_ROOT%{_bindir}/Packer
 
 %clean
