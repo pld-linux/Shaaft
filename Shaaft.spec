@@ -2,11 +2,12 @@ Summary:	Falling block game resembling Blockout
 Summary(pl):	Gra w spadaj±ce klocki przypominaj±ca Blockout
 Name:		Shaaft
 Version:	0.5.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/criticalmass/%{name}-%{version}.tar.bz2
 # Source0-md5:	c86524f286c60e3fd45b10d023a92db2
+Patch0:		%{name}-types.patch
 URL:		http://criticalmass.sourceforge.net/shaaft.php
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
@@ -30,9 +31,12 @@ trójwymiarowy klon Tetrisa.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-./autogen.sh
+%{__aclocal}
+%{__automake} --include-deps
+%{__autoconf}
 %configure
 %{__make}
 
