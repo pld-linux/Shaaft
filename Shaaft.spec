@@ -11,8 +11,8 @@ Patch0:		%{name}-types.patch
 URL:		http://criticalmass.sourceforge.net/shaaft.php
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
-BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_image-devel
+BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libpng-devel
