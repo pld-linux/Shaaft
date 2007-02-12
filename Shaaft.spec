@@ -1,5 +1,5 @@
 Summary:	Falling block game resembling Blockout
-Summary(pl.UTF-8):   Gra w spadające klocki przypominająca Blockout
+Summary(pl.UTF-8):	Gra w spadające klocki przypominająca Blockout
 Name:		Shaaft
 Version:	0.5.0
 Release:	2
