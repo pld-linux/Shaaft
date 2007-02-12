@@ -1,5 +1,5 @@
 Summary:	Falling block game resembling Blockout
-Summary(pl):	Gra w spadaj±ce klocki przypominaj±ca Blockout
+Summary(pl.UTF-8):   Gra w spadajÄ…ce klocki przypominajÄ…ca Blockout
 Name:		Shaaft
 Version:	0.5.0
 Release:	2
@@ -25,9 +25,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Shaaft is a falling block game resembling Blockout. It is a 3D Tetris
 clone.
 
-%description -l pl
-Shaaft to gra w spadaj±ce klocki przypominaj±ca Blockout. To
-trójwymiarowy klon Tetrisa.
+%description -l pl.UTF-8
+Shaaft to gra w spadajÄ…ce klocki przypominajÄ…ca Blockout. To
+trÃ³jwymiarowy klon Tetrisa.
 
 %prep
 %setup -q
